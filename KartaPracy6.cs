@@ -4,9 +4,7 @@ class Program {
   public static void Main (string[] args);
 //Zad1
 // a = int.Parse(Console.ReadLine());
-// Console.Write("Podaj liczbe2: ");
 // b = int.Parse(Console.ReadLine());
-// Console.Write("Podaj liczbe3: ");
 // c = int.Parse(Console.ReadLine());
 // if (b - a == c - b) 
 //     Console.WriteLine("Ciag jest arytmetyczny");
