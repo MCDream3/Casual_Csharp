@@ -2,17 +2,28 @@ using System;
 
 class Program {
   public static void Main (string[] args);
+//Zad1
+// a = int.Parse(Console.ReadLine());
+// Console.Write("Podaj liczbe2: ");
+// b = int.Parse(Console.ReadLine());
+// Console.Write("Podaj liczbe3: ");
+// c = int.Parse(Console.ReadLine());
+// if (b - a == c - b) 
+//     Console.WriteLine("Ciag jest arytmetyczny");
+// if (b / a == c / b) 
+//     Console.WriteLine("Ciag jest geometryczny");
+// Console.WriteLine();
 //Zad2
 
-//int suma = 0;
-//for (int i = 100; i < 1000; i++)
-//{
+// int suma = 0;
+// for (int i = 100; i < 1000; i++)
+// {
 //    if (i % 8 == 0 && i % 16 !=0)
 //    {
 //        suma += i;
 //    }
-//}
-//Console.WriteLine(suma);
+// }
+// Console.WriteLine(suma);
 
 //Zad3
 
@@ -83,6 +94,7 @@ class Program {
 //    }
 //}
 
+  //Zad7
   //int skladnik = 0;
 //int suma = 0;
 //int n = int.Parse(Console.ReadLine());
@@ -106,7 +118,7 @@ class Program {
 //int n = int.Parse(Console.ReadLine());
 //for (int i = 1; i <=n; i++)
 //{
-//    suma = suma + ((3 * i - 1) * ((int)Math.Pow(-1, i, 1)));
+//    suma = suma + ((3 * i - 1) * ((int)Math.Pow(-1,i,1)));
 //}
 //Console.WriteLine(suma);
 
