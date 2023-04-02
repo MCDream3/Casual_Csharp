@@ -24,3 +24,6 @@ pattern = "**/*.cs"
 
   [languages.csharp.languageServer]
   start = ["OmniSharp", "--languageserver"]
+
+[deployment]
+run = ["sh", "-c", "dotnet run"]
