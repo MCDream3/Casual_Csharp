@@ -72,6 +72,20 @@ else
 
 //3. Sprawdź czy wieksza jest suma dwóch wpisanych przez usera ułamków czy suma ich odwrotności.
 
+int numer1 = int.Parse(Console.ReadLine());
+int denom1 = int.Parse(Console.ReadLine());
+int numer2 = int.Parse(Console.ReadLine());
+int denom2 = int.Parse(Console.ReadLine());
+double sumFraction = (double)numer1 / denom1 + (double)numer2 / denom2;
+double sumReciprocal = (double)denom1 / numer1 + (double)denom2 / numer2;
+
+if (sumFraction > sumReciprocal)
+    Console.WriteLine("Suma ułamków jest większa.");
+else if (sumFraction < sumReciprocal)
+    Console.WriteLine("Suma odwrotności ułamków jest większa.");
+else
+    Console.WriteLine("Suma ułamków i suma odwrotności ułamków są równe.");
+
 //4. Sprawdź czy w danym napisie więcej jest spółgłosek czy samogłosek.
 
 char[] Vowels = {'a','e', 'i', 'o', 'u', 'y'};
@@ -94,6 +108,34 @@ else
 
 //6. Znajdź trzy takie liczby, których suma, a także suma każdej pary tych liczb jest kwadratem innej liczby.
 
+for (int i = 1; i < 100; i++)
+{
+    for (int j = i + 1; j < 100; j++)
+    {
+        for (int k = j + 1; k < 100; k++)
+        {
+            int suma = i + j + k;
+            int sumaAB = i + j;
+            int sumaBC = j + k;
+            int sumaAC = i + k;
+
+            if (CzyKwadrat(suma) && CzyKwadrat(sumaAB) && CzyKwadrat(sumaBC) && CzyKwadrat(sumaAC))
+            {
+                Console.WriteLine($"Liczby: {a}, {b}, {c}");
+                Console.WriteLine($"Suma: {suma}, Suma AB: {sumaAB}, Suma BC: {sumaBC}, Suma AC: {sumaAC}");
+                Console.WriteLine();
+            }
+        }
+    }
+}
+
+
+static bool CzyKwadrat(int liczba)
+{
+    int pierwiastek = (int)Math.Sqrt(liczba);
+    return pierwiastek * pierwiastek == liczba;
+}
+
 //7. Dwie wieżyce, jedna wysokości 30 stóp, druga 40 stóp, oddalone są od siebie o 50 stóp. 
 //Pomiędzy nimi znajduje się wodotrysk, do którego zlatują dwa ptaki z wierzchołków obu wieżyc 
 //i lecąc z jednakową prędkością przybywają w tym samym czasie. 
@@ -103,6 +145,45 @@ else
 //a drugi z nich musi szybko odpowiedzieć, ile w tym przedziale jest liczb,
 //które są podzielne przez siedem, albo suma ich cyfr jest podzielna przez siedem (lub jedno i drugie). 
 //Napisz program, który pomaga w takich obliczeniach.
+
+int a = int.Parse(Console.ReadLine());
+int b = int.Parse(Console.ReadLine());
+
+int zlicz = ObliczLiczLiczbSiedem(a, b);
+
+Console.WriteLine($"W przedziale <{a}, {b}> jest {zlicz} liczb, które spełniają warunki gry 'Siedem'.");
+
+
+static bool CzyPodzielPrzezSiedem(int l)
+{
+    return l % 7 == 0;
+}
+
+static bool CzySumCyfrPodzielPrzezSiedem(int l)
+{
+    int sumCyfr = 0;
+    while (l != 0)
+    {
+        sumCyfr += l % 10;
+        l /= 10;
+    }
+    return sumCyfr % 7 == 0;
+}
+
+static int ObliczLiczLiczbSiedem(int a, int b)
+{
+    int zlicz = 0;
+
+    for (int i = a; i <= b; i++)
+    {
+        if (CzyPodzielPrzezSiedem(i) || CzySumCyfrPodzielPrzezSiedem(i))
+        {
+            zlicz++;
+        }
+    }
+return zlicz;
+}
+
 
 //9. Halinka wspina się na schody w centrum handlowym. Za każdym razem, gdy dziewczynka wspina się na nowe schody,
 //zaczyna liczyć na głos po kolei od 1 do ilości stopni. Na przykład,
