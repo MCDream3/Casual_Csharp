@@ -1,0 +1,36 @@
+1. Planowanie systemu
+
+logoalkolator jest systemem umożliwiającym zalogowanemu i trzeźwemu użytkownikowi
+wykonywać operacje arytmetyczne dodawania, odejmowania, mnożenia i dzielenia
+
+2. Analiza systemu
+
+części składowe:
+
+- logowanie
+- sprawdzanie trzeźwości
+- obliczanie
+- wylogowywanie
+
+3. Projekt systemu
+
+przypadki użycia:
+
+- user się loguje
+- user rozwiązuje zadanie matematyczne
+-user może wykonać dowolną operację
+
+baza danych to plik: user;hasło - wpisane z ręki na stałe, lokalizacja stała
+
+inne wymagania: funkcje, wielkie litery, notacja camel
+
+4. Implementacja
+
+
+
+5. Testowanie
+
+
+
+6. Wdrożenie i pielęgnacja powstałego systemu
+
